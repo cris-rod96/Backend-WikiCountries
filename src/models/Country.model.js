@@ -55,7 +55,6 @@ export default (sequelize) => {
       location: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
         validate: {
           isUrl: true,
         },

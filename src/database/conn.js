@@ -8,7 +8,7 @@ import {
 
 const { URI_DATABASE } = process.env;
 
-const conn = new Sequelize(URI_DATABASE, { logging: false });
+const conn = new Sequelize(URI_DATABASE, { logging: false, native: false });
 
 UserModel(conn);
 ActivityModel(conn);
@@ -27,4 +27,4 @@ Activity.belongsTo(User, {
 Activity.belongsToMany(Country, { through: "Activities_Countries" });
 Country.belongsToMany(Activity, { through: "Activities_Countries" });
 
-export default { conn, models: conn.models };
+export { conn, User, Country, Activity };

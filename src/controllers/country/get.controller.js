@@ -1,5 +1,5 @@
 import { Op } from "sequelize";
-import { Country } from "../../database/conn";
+import { Country } from "../../database/conn.js";
 const getAll = async (req, res) => {
   try {
     const countries = await Country.findAll({});

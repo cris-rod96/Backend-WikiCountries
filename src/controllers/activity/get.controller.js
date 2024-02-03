@@ -61,4 +61,5 @@ const getByName = async (req, res) => {
     });
   }
 };
+
 export default { getAll, getById, getByName };

@@ -8,4 +8,7 @@ router.get("/search", activityControllers.getActivity.getByName);
 
 router.post("/create", activityControllers.createActivity);
 
+router.put("/edit/:id", activityControllers.updateActivity);
+router.delete("/delete/:id", activityControllers.deleteActivity);
+
 export default router;

@@ -6,7 +6,7 @@ const { PORT } = process.env;
 conn
   .sync({
     logging: false,
-    force: true,
+    force: false,
   })
   .then(() => {
     server.listen(PORT, () => {
